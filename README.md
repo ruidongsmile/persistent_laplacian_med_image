@@ -19,7 +19,7 @@ one is the first eigenvalue of persistent $1$-Laplacian
   <img src="/images/animations_15.png" width="160" />
   <img src="/images/animations_17.png" width="160" />
   <img src="/images/animations_20.png" width="160" />  
-</p>
+</>
 
 
 
