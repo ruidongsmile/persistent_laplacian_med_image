@@ -11,7 +11,8 @@ eigenvalues of the persistent Laplacian.
 
 In this project,
 we focus on two cases,
-one is the first eigenvalue of persistent $1$-Laplacian 
+i.e.,
+the first eigenvalue of persistent $1$-Laplacian and the smallest non-zero eigenvalue of persistent $1$-up Laplacian.
 
 <p>
   <img src="/images/animations_10.png" width="160" />
