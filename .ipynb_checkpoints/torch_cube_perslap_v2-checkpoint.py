@@ -1,6 +1,5 @@
 import numpy as np
 import torch
-from gudhi import CubicalComplex
 
 def torch_chains_count(X): # X is a tensor of shape: (Channel, Row, Column)
     c, m, n = X.shape
@@ -214,35 +213,7 @@ def torch_persistence_laplacian_filtration_v2(X, channel, cell_dim, start=0., en
     laps = (lap_up + lap_down for lap_up, lap_down in zip(lap_ups, lap_downs))
     return laps
 
-def perslap_eigs_pairs(img, cell_dim, start=0.2, end=1.0, steps=5, channel=0, eig_idx=1):
-    X = torch.tensor(CubicalComplex(top_dimensional_cells=img[channel, :, :]).all_cells(), dtype=torch.float32)
-    X = X.unsqueeze(0)
 
-    times = torch.linspace(start=start, end=end, steps=steps)
-    # times = times ** 2 # nonlinearize the times
-    # times = (torch.e - torch.exp(1 - times)) / (torch.e - 1)
-    times = times ** 3 - 3. / 2. * times ** 2 + 3. / 2. * times  
-
-    laps = []
-
-    for t in range(1, len(times)):
-        pers_lap = torch_persistence_laplacian_v2(X=X, filt_1=times[t-1], filt_2=times[t], channel=channel, cell_dim=cell_dim)
-        if pers_lap.is_sparse:
-            pers_lap = pers_lap.to_dense()
-        # try:
-            # eig = torch.lobpcg(pers_lap, k=eig_idx+1, largest=False)[0][0:eig_idx+1]
-        # except:
-        
-        eig = torch.linalg.eigvalsh(pers_lap)[0:eig_idx+1]
-        dim_diff = eig_idx + 1 - pers_lap.shape[0]
-        if dim_diff > 0:
-            eig = torch.cat((eig, torch.zeros(dim_diff)), 0)
-        laps.append(eig)
-    
-    # laps = torch_persistence_laplacian_filtration_v2(X=X, channel=0, cell_dim=cell_dim, start=start, end=end, steps=steps)
-    
-    # eigns = torch.tensor([compute_eigvals(lap, eig_idx=1) for lap in laps])
-    return laps   # torch.stack(laps)
 
 
 
