@@ -13,7 +13,7 @@ In this project,
 we focus on two cases,
 one is the first eigenvalue of persistent $1$-Laplacian 
 
-<p float="center">
+<p float="left">
   <img src="/images/animations_10.png" width="160" />
   <img src="/images/animations_13.png" width="160" />
   <img src="/images/animations_15.png" width="160" />
