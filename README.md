@@ -1,4 +1,12 @@
-# persistent_laplacian_med_image
+# Persistent Laplacian and medical images
 This is a project to apply persistent Laplacian to analyse medical images
 
-![anim_flip](https://github.com/user-attachments/assets/5ab60970-2366-4e98-acc8-29c25b54cce0)
+<p float="left">
+  <img src="/images/animations_0.png" width="100" />
+  <img src="/images/animations_10.png" width="100" /> 
+  <img src="/images/animations_15.png" width="100" />
+  <img src="/images/animations_20.png" width="100" />  
+</p>
+
+
+[comment]: <> ( ![](anim_flip.gif))
