@@ -244,6 +244,37 @@ def perslap_eigs_pairs(img, cell_dim, start=0.2, end=1.0, steps=5, channel=0, ei
     # eigns = torch.tensor([compute_eigvals(lap, eig_idx=1) for lap in laps])
     return laps   # torch.stack(laps)
 
+def perslap_eigs_pairs_up(img, cell_dim, start=0.2, end=1.0, steps=5, channel=0):
+    X = torch.tensor(CubicalComplex(top_dimensional_cells=img[channel, :, :]).all_cells(), dtype=torch.float32)
+    X = X.unsqueeze(0)
+
+    times = torch.linspace(start=start, end=end, steps=steps)
+    # times = times ** 2 # nonlinearize the times
+    # times = (torch.e - torch.exp(1 - times)) / (torch.e - 1)
+    # times = times ** 3 - 3. / 2. * times ** 2 + 3. / 2. * times  
+
+    laps = []
+
+    for t in range(1, len(times)):
+        pers_lap_up = torch_persistence_lap_up_v2(X=X, filt_1=times[t-1], filt_2=times[t], channel=channel, cell_dim=cell_dim)
+        if pers_lap_up.is_sparse:
+            pers_lap_up = pers_lap_up.to_dense()
+        # try:
+            # eig = torch.lobpcg(pers_lap, k=eig_idx+1, largest=False)[0][0:eig_idx+1]
+        # except:
+        
+        eig_vals= torch.linalg.eigvalsh(pers_lap_up)
+        try:
+            lmbda = eig_vals[eig_vals > 1e-4][0]
+        except:
+            lmbda = torch.tensor(0.)
+        
+        laps.append(lmbda)
+    
+    # laps = torch_persistence_laplacian_filtration_v2(X=X, channel=0, cell_dim=cell_dim, start=start, end=end, steps=steps)
+    
+    # eigns = torch.tensor([compute_eigvals(lap, eig_idx=1) for lap in laps])
+    return laps   # torch.stack(laps)
 
 
 
