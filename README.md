@@ -6,7 +6,7 @@ persistent Laplacian associated with a [cubical complex filtration](https://gudh
 
 Roughly speaking,
 for a given image,
-the process is to first filter out the image according to the values of pixels and then studying about the peresistent behavior of the 
+the process is to first filter out the image according to the values of pixels and then studying about the persistent behavior of the 
 eigenvalues of the persistent Laplacian.
 
 In this project,
