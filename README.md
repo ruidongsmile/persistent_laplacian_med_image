@@ -25,6 +25,14 @@ the first eigenvalue of persistent $1$-Laplacian and the smallest non-zero eigen
 </p>
 
 ## The files
-In this project the ""
+In this project, the files "pneum_Lap.ipynb" and "pneum_up_Lap.ipynb" exhibit the process of 
+computing the first eigenvalues of persistent Laplacian and the smallest non-zero eigenvalues of 
+persistent up-Laplacian respectively,
+and the eigenvalues are saved in the folder "eigenvalues".
+These eigenvalues are the input object for training.
+The files "pneum_Lap_dpl.ipynb" and "pneum_up_Lap_dpl.ipynb" show the training process of the eigenvalues produced 
+by the previous two files.
+In this project we only take a simple fully connected neural network with 5 hidden layers.
+
 
 
