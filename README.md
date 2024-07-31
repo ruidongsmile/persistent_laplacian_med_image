@@ -37,12 +37,15 @@ In this project we only take a simple fully connected neural network with 5 hidd
 # More words about cubical complex structure
 We take a $3\times 3$ pixel image as an example.
 In the following image each vertex represents one pixel,
-we call the edges between each two adjacent vertexes $1$-dim cubes,
-and the squares between each four adjacent vertexes $2$-dim cubes.
-
+the value is given by the corresponding pixel.
+We call the edges between each two adjacent vertexes $1$-dim cubes,
+the value of an edge is set to be the minimal value of the two vertexes,
+and we call the squares between each four adjacent vertexes $2$-dim cubes,
+the value of a square is set to be the minimal value of the four vertexes.
 <p>
   <img src="/images/pic1.png" width="320" />
 </p>
+
 
 
 
