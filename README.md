@@ -36,10 +36,13 @@ In this project we only take a simple fully connected neural network with 5 hidd
 
 # More words about cubical complex structure
 We take a $3\times 3$ pixel image as an example.
+In the following image each vertex represents one pixel,
+we call the edges between each two adjacent vertexes $1$-dim cubes,
+and the squares between each four adjacent vertexes $2$-dim cubes.
 
 <p>
-  <img src="/images/pic0.png" width="320" />
-  
+  <img src="/images/pic1.png" width="320" />
 </p>
+
 
 
