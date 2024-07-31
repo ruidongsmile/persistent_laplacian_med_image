@@ -33,32 +33,11 @@ These eigenvalues are the input object for training.
 The files "pneum_Lap_dpl.ipynb" and "pneum_up_Lap_dpl.ipynb" show the training process of the eigenvalues produced 
 by the previous two files.
 In this project we only take a simple fully connected neural network with 5 hidden layers.
+
+# More words about cubical complex structure
+We take a
 ```math
-\begin{tikzpicture}
-    \fill[red!50] (0,1) rectangle (1,2);
-        \fill[red!50] (1,1) rectangle (2,2);
-        \fill[red!50] (0,0) rectangle (1,1);
-        \fill[red!50] (1,0) rectangle (2,1);
-    % Draw the grid
-    \draw[step=1cm, gray, very thin] (0,0) grid (2,2);
-    
-    % Draw the vertices
-    \foreach \x in {0,1,2} {
-        \foreach \y in {0,1,2} {
-            \node[fill=black, circle, inner sep=1pt] at (\x,\y) {};
-        }
-    }
-    % Label the vertices
-    \node[anchor=south east] at (0,0) {7};
-    \node[anchor=south west] at (1.65,0) {9};
-    \node[anchor=north east] at (0.05,2.5) {1};
-    \node[anchor=north west] at (1.65,2.5) {3};
-    \node[anchor=north] at (0.85,2.5) {2};
-    \node[anchor=south] at (0.85,0) {8};
-    \node[anchor=west] at (1.65,1.3) {6};
-    \node[anchor=east] at (0.05,1.3) {4};
-    \node[anchor=center] at (0.85,1.3) {5};
-\end{tikzpicture}
+3\times 3
 ```
 
 
