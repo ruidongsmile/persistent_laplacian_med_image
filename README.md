@@ -35,7 +35,7 @@ by the previous two files.
 In this project we only take a simple fully connected neural network with 5 hidden layers.
 
 # More words about cubical complex structure
-We take a $ 3\times 3$
+We take a $3\times 3$
 
 
 
