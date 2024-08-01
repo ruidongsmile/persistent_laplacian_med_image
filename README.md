@@ -1,5 +1,5 @@
 # Persistent Laplacian and medical images
-This is a project to apply persistent Laplacian to analyse medical images.
+This is a project to apply [persistent Laplacian](https://epubs.siam.org/doi/10.1137/21M1435471) to analyse medical images.
 In this project,
 we take the pneumoniamnist dataset from [MedMNIST](https://medmnist.com/) to demonstrate that the spectrum of 
 persistent Laplacian associated with a [cubical complex filtration](https://gudhi.inria.fr/python/latest/cubical_complex_user.html) encode the geometric information of an image.
@@ -99,6 +99,11 @@ that is what the file "pneum_Lap.ipynb" is doing.
 ### Persistent $1$-up-Laplacian
 We then compute the $14$ persistent $1$-up-Laplacians: $\triangle_{1, \mathrm{up}}^{L_1, L_2}$, $\triangle_{1, \mathrm{up}}^{L_2, L_3}$,
 , ..., $\triangle_{1, \mathrm{up}}^{L_{13}, L_{14}}$,
+for each one we compute the smallest non-zero eigenvalue,
+as a result we come up with a $14\times 1$ tensor for each image,
+that is what the file "pneum_up_Lap.ipynb" is doing.
+
+
 
 
 
