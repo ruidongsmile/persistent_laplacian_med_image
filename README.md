@@ -41,7 +41,7 @@ one is to regard each pixel as a vertex,
 which is also referred to as a "$0$-dim cube".
 We call an edge between two adjacent vertexes a ''$1$-dim cube'',
 the value of an edge is set to be the minimal value of the two adjacent vertexes,
-and we call an square between four adjacent vertexes a '''$2$-dim cube'',
+and we call an square between four adjacent vertexes a ''$2$-dim cube'',
 the value of a square is set to be the minimal value of the four adjacent vertexes.
 We call the collection of all the cubes as a cubical complex,
 and we denote it as $L$,
