@@ -73,9 +73,12 @@ $$\triangle_{1, \mathrm{up}}^{K, L}:=\partial_{2}^{K, L}\cdot \left(\partial_{2}
 
 and the persistent $1$-Laplacian $\triangle_1^{K, L}: C_1^K\to C_1^K$ is defined as 
 
-$$\triangle_1^{K, L}:=\partial_{2}^{K, L}\cdot \left(\partial_{2}^{K, L}\right)^* + \left(\partial_{1}^K\right)^*\cdot\partial_{1}^K,$$
+$$\triangle_1^{K, L}:=\partial_{2}^{K, L}\cdot \left(\partial_{2}^{K, L}\right)^* + \left(\partial_{1}^K\right)^*\cdot\partial_{1}^K.$$
 
-
+In this project,
+each pixel of the images ranges from $0$ to $1$,
+we evenly divide the interval $[0, 1]$ into $14$ intervals $t_0,t_1, \cdots, t_14$,
+compute the persistent Laplacian
 
 
 
