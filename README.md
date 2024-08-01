@@ -105,7 +105,7 @@ that is what the file "pneum_up_Lap.ipynb" is doing.
 
 # Remark
 This project is mainly an experiment to show that the technique of persistent Laplacian can be applicable in medical imaging.
-The algorithm is cited from [M*é*moli](https://epubs.siam.org/doi/10.1137/21M1435471)
+The algorithm is cited from [M*é*moli et al.](https://epubs.siam.org/doi/10.1137/21M1435471)
 
 
 
