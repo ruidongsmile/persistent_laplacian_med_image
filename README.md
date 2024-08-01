@@ -54,7 +54,11 @@ $$C_2^L = \\{(4512), (5623), (7845), (8956)\\},$$
 
 
 Then we set a filtration threshold,
-keep only all the $1$-cubes with value less than or equal to $0.5$ and all the $0$-cubes (or vertexes):
+keep only all the $1$-cubes with value less than or equal to $0.5$ and all the $0$-cubes (or vertexes),
+which is denoted as $K,
+with 
+$$C_0^{K_1} = \\{(1), (2), (3), (4), (5), (6), (7), (8), (9)\\},$$
+$$C_1^{K_1} = \\{(12), (23), (41), (63), (45), (56), (74), (85), (96), (78), (89)\\}:$$
 <p>
   <img src="/images/pic6.png" width="280" />
 </p>
