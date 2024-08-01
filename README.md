@@ -90,7 +90,8 @@ such a cubical complex contains $841$ vertexes, $1624$ edges and $784$ squares.
 On the other hand,
 the pixels range from $0$ to $1$,
 we first evenly divide the interval $[0, 1]$ into $14$ intervals $0=t_0 \< t_1 \< \cdots \< t_{14}=1$,
-Let $L^{t_i}$ denote the sub-cubical complex with cubes whose values are less than $t_{i}$ for $1\\leq i\\leq 14$.
+Let $L_{i}$ denote the sub-cubical complex with cubes whose values are less than $t_{i}$ for $1\\leq i\\leq 14$.
+We can then obtain $14$ persistent $1$-Laplacian $\triangle_{1}^{L_1, L_2}$, $\triangle_{1}^{L_2, L_3}$, ..., $\triangle_{1}^{L_{13}, L_{14}}$.
 
 
 
