@@ -77,7 +77,7 @@ and the persistent $1$-Laplacian $\triangle_1^{K, L}: C_1^K\to C_1^K$ is defined
 
 $$\triangle_1^{K, L}:=\partial_{2}^{K, L}\cdot \left(\partial_{2}^{K, L}\right)^* + \left(\partial_{1}^K\right)^*\cdot\partial_{1}^K.$$
 
-The other way is to regard each pixel as a square in a cubical complex,
+The other way to construct a cubical complex is to regard each pixel as a square in a cubical complex,
 and the value of edges and vertexes is taken to be the smallest value of the adjacent squares.
 The process is similar to the previous case, 
 thus we skip the details.
