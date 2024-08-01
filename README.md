@@ -38,7 +38,7 @@ In this project we only take a simple fully connected neural network with 5 hidd
 We take a $3\times 3$ pixel image as an example to explain the basic idea of cubical complex filtration.
 There are two ways to construct cubical complexes,
 one is to regard each pixel as a vertex,
-which is also referred to as a ''$0$-dim cube''.
+which is also referred to as a "$0$-dim cube".
 We call an edge between two adjacent vertexes a ''$1$-dim cube'',
 the value of an edge is set to be the minimal value of the two adjacent vertexes,
 and we call an square between four adjacent vertexes a '''$2$-dim cube'',
