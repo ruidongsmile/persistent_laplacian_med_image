@@ -36,12 +36,13 @@ In this project we only take a simple fully connected neural network with 5 hidd
 
 # More words about cubical complex structure
 We take a $3\times 3$ pixel image as an example to explain the basic idea of cubical complex filtration.
-There are two ways to construct cubical complexes,
-one is to regard each pixel as a vertex,
+There are two ways to construct cubical complexes. 
+
+One is to regard each pixel as a vertex,
 which is also referred to as a $0$-dim cube.
 We call an edge between two adjacent vertexes a $1$-dim cube,
 the value of an edge is set to be the minimal value of the two adjacent vertexes,
-and we call an square between four adjacent vertexes a ''$2$-dim cube'',
+and we call an square between four adjacent vertexes a $2$-dim cube,
 the value of a square is set to be the minimal value of the four adjacent vertexes.
 We call the collection of all the cubes as a cubical complex,
 and we denote it as $L$,
@@ -76,13 +77,18 @@ and the persistent $1$-Laplacian $\triangle_1^{K, L}: C_1^K\to C_1^K$ is defined
 
 $$\triangle_1^{K, L}:=\partial_{2}^{K, L}\cdot \left(\partial_{2}^{K, L}\right)^* + \left(\partial_{1}^K\right)^*\cdot\partial_{1}^K.$$
 
+The other way is to regard each pixel as a square in a cubical complex,
+and the value of edges and vertexes is taken to be the smallest value of the adjacent squares.
+The process is similar to the previous case, 
+thus we skip the details.
 ## Construct a cubical complex from an image 
-Take an image from pneumoniamnist dataset,
-it 
-we first construct a cubical complex 
+Each image in the pneumoniamnist dataset is an $28\times 28$ image.
 In this project,
-each pixel of the images ranges from $0$ to $1$,
-we first evenly divide the interval $[0, 1]$ into $14$ intervals $t_0,t_1, \cdots, t_4$,
+we construct the cubical complex by regarding each pixel as a square,
+hence a cubical complex with respect to an image contains $841$ vertexes, $1624$ edges and $784$ squares.
+On the other hand,
+the pixels range from $0$ to $1$,
+we first evenly divide the interval $[0, 1]$ into $14$ intervals $0=t_0<t_1< \cdots < t_{14}=1$,
 compute the persistent Laplacian
 
 
