@@ -42,9 +42,9 @@ We call an edge between two adjacent vertexes a ''$1$-dim cube'',
 the value of an edge is set to be the minimal value of the two adjacent vertexes,
 and we call an square between four adjacent vertexes a '''$2$-dim cube'',
 the value of a square is set to be the minimal value of the four adjacent vertexes.
-
-Let $L$ be a $2$-cubical complex with $0$-cubes, 
-$1$-cubes and $2$-cubes with:
+We call the collection of all the cubes as a cubical complex,
+and we denote it as $L$,
+with $0$-cubes, $1$-cubes and $2$-cubes as:
 $$C_0^L = \\{(1), (2), (3), (4), (5), (6), (7), (8), (9)\\},$$
 $$C_1^L = \\{(12), (23), (41), (52), (63), (45), (56), (74), (85), (96), (78), (89)\\},$$
 $$C_2^L = \\{(4512), (5623), (7845), (8956)\\},$$
