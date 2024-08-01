@@ -69,7 +69,7 @@ and a boundary map $\partial_1^K: C_1^K\to C_0^K$.
 
 The persistent $1$-Laplacian $\triangle_1^{K, L}: C_1^K\to C_1^K$ is defined as 
 
-$$\triangle_1^{K, L}:=\partial_{1}^{K, L}\cdot \left(\partial_{1}^{K, L}\right)^*$$
+$$\triangle_1^{K, L}:=\partial_{2}^{K, L}\cdot \left(\partial_{2}^{K, L}\right)^* + \left(\partial_{1}^K\right)^*\cdot\partial_{1}^K$$
 
 
 
