@@ -90,7 +90,7 @@ such a cubical complex contains $841$ vertexes, $1624$ edges and $784$ squares.
 On the other hand,
 the pixels range from $0$ to $1$,
 we first evenly divide the interval $[0, 1]$ into $14$ intervals $0=t_0 \< t_1 \< \cdots \< t_{14}=1$,
-Let $Lˆ{t_i, t_{i+1}}$ denote the sub-cubical complex with cubes whose values are less than $t_{i+1}$ and bigger than $t_i$ for $0\\leq i$
+Let $Lˆ{t_i, t_{i+1}}$ denote the sub-cubical complex with cubes whose values are less than $t_{i+1}$ and bigger than $t_i$ for $0\\leq i\\leq 13$.
 
 
 
