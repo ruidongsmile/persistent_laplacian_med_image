@@ -47,6 +47,7 @@ the value of a square is set to be the minimal value of the four adjacent vertex
 We call the collection of all the cubes as a cubical complex,
 and we denote it as $L$,
 with the $0$-cubes, $1$-cubes and $2$-cubes as:
+
 $$C_0^L = \\{(1), (2), (3), (4), (5), (6), (7), (8), (9)\\},$$
 $$C_1^L = \\{(12), (23), (41), (52), (63), (45), (56), (74), (85), (96), (78), (89)\\},$$
 $$C_2^L = \\{(4512), (5623), (7845), (8956)\\},$$
@@ -59,6 +60,7 @@ Then we set a filtration threshold,
 keep only all the $1$-cubes with value less than or equal to $0.5$ and all the $0$-cubes (or vertexes),
 which is denoted as $K$,
 with:
+
 $$C_0^{K} = \\{(1), (2), (3), (4), (5), (6), (7), (8), (9)\\},$$
 $$C_1^{K} = \\{(12), (23), (41), (63), (45), (56), (74), (85), (96), (78), (89)\\}.$$
 <p>
