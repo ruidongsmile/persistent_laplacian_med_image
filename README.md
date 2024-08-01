@@ -47,7 +47,11 @@ the value of a square is set to be the minimal value of the four adjacent vertex
 </p>
 
 Then we set a filtration threshold,
-extract all the cubes 
+extract all the cubes with value less than or equal to $0.5$:
+<p>
+  <img src="/images/pic5.png" width="280" />
+</p>
+
 
 
 
