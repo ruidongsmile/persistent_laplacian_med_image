@@ -103,6 +103,10 @@ for each one we compute the smallest non-zero eigenvalue,
 as a result we come up with a $14\times 1$ tensor for each image,
 that is what the file "pneum_up_Lap.ipynb" is doing.
 
+# Remark
+This project is mainly an experiment to show that the technique of persistent Laplacian can be applicable in medical imaging.
+The algorithm is cited from [M\'emoli](https://epubs.siam.org/doi/10.1137/21M1435471)
+
 
 
 
