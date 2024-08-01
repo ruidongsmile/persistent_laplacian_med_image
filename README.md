@@ -36,7 +36,8 @@ In this project we only take a simple fully connected neural network with 5 hidd
 
 # More words about cubical complex structure
 We take a $3\times 3$ pixel image as an example to explain the basic idea of cubical complex filtration.
-In the following image each vertex represents one pixel,
+There are two ways to construct cubical complexes,
+one is to regard each pixel as a vertex,
 which is also referred to as a ''$0$-dim cube''.
 We call an edge between two adjacent vertexes a ''$1$-dim cube'',
 the value of an edge is set to be the minimal value of the two adjacent vertexes,
@@ -75,9 +76,13 @@ and the persistent $1$-Laplacian $\triangle_1^{K, L}: C_1^K\to C_1^K$ is defined
 
 $$\triangle_1^{K, L}:=\partial_{2}^{K, L}\cdot \left(\partial_{2}^{K, L}\right)^* + \left(\partial_{1}^K\right)^*\cdot\partial_{1}^K.$$
 
+## Construct a cubical complex from an image 
+Take an image from pneumoniamnist dataset,
+it 
+we first construct a cubical complex 
 In this project,
 each pixel of the images ranges from $0$ to $1$,
-we evenly divide the interval $[0, 1]$ into $14$ intervals $t_0,t_1, \cdots, t_14$,
+we first evenly divide the interval $[0, 1]$ into $14$ intervals $t_0,t_1, \cdots, t_4$,
 compute the persistent Laplacian
 
 
