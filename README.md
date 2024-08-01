@@ -45,8 +45,8 @@ the value of a square is set to be the minimal value of the four adjacent vertex
 
 Let $L$ be a $2$-cubical complex with $0$-cubes, 
 $1$-cubes and $2$-cubes with:
-$$C_0^L = {(1), (2), (3), (4), (5), (6), (7), (8), (9)},$$
-$$C_1^L = \{(12), (23), (41), (52), (63), (45), (56), (74), (85), (96), (78), (89)\},$$
+$$C_0^L = \\{(1), (2), (3), (4), (5), (6), (7), (8), (9)\\},$$
+$$C_1^L=\{(12), (23), (41), (52), (63), (45), (56), (74), (85), (96), (78), (89)\},$$
 $$C_2^L = \{(4512), (5623), (7845), (8956)\},$$
 <p>
   <img src="/images/pic4.png" width="280" />
