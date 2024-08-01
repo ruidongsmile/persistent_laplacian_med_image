@@ -63,8 +63,8 @@ $$C_1^{K} = \\{(12), (23), (41), (63), (45), (56), (74), (85), (96), (78), (89)\
   <img src="/images/pic6.png" width="280" />
 </p>
 
-There is a linear map $\partial_2^{K, L}$ which is also refereed to as a boundary map 
-from $C_2^L$ to $C_1^{K}$
+There is a linear map referred to as a boundary map 
+from $\partial_2^{K, L}: C_2^L$ to $C_1^{K}$
 
 
 
