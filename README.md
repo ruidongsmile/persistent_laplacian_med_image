@@ -93,9 +93,12 @@ we evenly divide the interval $[0, 1]$ into $14$ intervals $0=t_0 \< t_1 \< \cdo
 let $L_{i}$ denote the sub-cubical complex with cubes whose values are less than $t_{i}$ for $1\\leq i\\leq 14$.
 ### Persistent $1$-Laplacian
 We first compute the $14$ persistent $1$-Laplacians: $\triangle_{1}^{L_1, L_2}$, $\triangle_{1}^{L_2, L_3}$, ..., $\triangle_{1}^{L_{13}, L_{14}}$,
-from which we compute the smallest $3$ eigenvalues, for each persistent $1$-Laplacian,
+for each one we compute the smallest $3$ eigenvalues,
 as a result we produce a $14\times 3$ tensor from each image, 
 that is what the file "pneum_Lap.ipynb" is doing.
+### Persistent $1$-up-Laplacian
+We then compute the $14$ persistent $1$-up-Laplacians: $\triangle_{1, \mathrm{up}}^{L_1, L_2}$, $\triangle_{1, \mathrm{up}}^{L_2, L_3}$,
+, ..., $\triangle_{1, \mathrm{up}}^{L_{13}, L_{14}}$,
 
 
 
