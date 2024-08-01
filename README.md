@@ -83,13 +83,14 @@ The process is similar to the previous case,
 thus we skip the details.
 ## Construct a cubical complex from an image 
 Each image in the pneumoniamnist dataset is an $28\times 28$ image.
-In this project,
-we construct the cubical complex by regarding each pixel as a square,
-hence a cubical complex with respect to an image contains $841$ vertexes, $1624$ edges and $784$ squares.
+Take one image,
+we construct the corresponding cubical complex $L$ by regarding each pixel as a square,
+as a result,
+such a cubical complex contains $841$ vertexes, $1624$ edges and $784$ squares.
 On the other hand,
 the pixels range from $0$ to $1$,
 we first evenly divide the interval $[0, 1]$ into $14$ intervals $0=t_0 \< t_1 \< \cdots \< t_{14}=1$,
-compute the persistent Laplacian
+Let $Lˆ{t_i, t_{i+1}}$ denote the sub-cubical complex with cubes whose values are less than $t_{i+1}$ and bigger than $t_i$ for $0\\leq i$
 
 
 
