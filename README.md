@@ -88,7 +88,7 @@ we construct the cubical complex by regarding each pixel as a square,
 hence a cubical complex with respect to an image contains $841$ vertexes, $1624$ edges and $784$ squares.
 On the other hand,
 the pixels range from $0$ to $1$,
-we first evenly divide the interval $[0, 1]$ into $14$ intervals $0=t_0\\<t_1 < \cdots < t_{14}=1$,
+we first evenly divide the interval $[0, 1]$ into $14$ intervals $0=t_0\\<t_1 \\< \cdots, t_{14}=1$,
 compute the persistent Laplacian
 
 
