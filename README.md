@@ -54,9 +54,9 @@ $$C_2^L = \\{(4512), (5623), (7845), (8956)\\},$$
 
 
 Then we set a filtration threshold,
-extract all the cubes with value less than or equal to $0.5$:
+keep only all the $1$-cubes with value less than or equal to $0.5$ and all the $0$-cubes (or vertexes):
 <p>
-  <img src="/images/pic5.png" width="280" />
+  <img src="/images/pic6.png" width="280" />
 </p>
 
 
