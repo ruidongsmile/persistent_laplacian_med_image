@@ -14,7 +14,7 @@ or define a persistent Laplacian and study about the corresponding eigenvelues.
 In this project,
 we focus on two cases,
 i.e.,
-the first eigenvalue of persistent $1$-Laplacian and the smallest non-zero eigenvalue of persistent $1$-up Laplacian.
+the eigenvalues of persistent $1$-Laplacian and that of persistent $1$-up Laplacian.
 
 <p>
   <img src="/images/animations_10.png" width="160" />
@@ -89,10 +89,15 @@ as a result,
 such a cubical complex contains $841$ vertexes, $1624$ edges and $784$ squares.
 On the other hand,
 the pixels range from $0$ to $1$,
-we first evenly divide the interval $[0, 1]$ into $14$ intervals $0=t_0 \< t_1 \< \cdots \< t_{14}=1$,
-Let $L_{i}$ denote the sub-cubical complex with cubes whose values are less than $t_{i}$ for $1\\leq i\\leq 14$.
-We can then obtain $14$ persistent $1$-Laplacians: $\triangle_{1}^{L_1, L_2}$, $\triangle_{1}^{L_2, L_3}$, ..., $\triangle_{1}^{L_{13}, L_{14}}$.
-We compute the smallest eigenvalues, 
+we evenly divide the interval $[0, 1]$ into $14$ intervals $0=t_0 \< t_1 \< \cdots \< t_{14}=1$,
+let $L_{i}$ denote the sub-cubical complex with cubes whose values are less than $t_{i}$ for $1\\leq i\\leq 14$.
+### Persistent $1$-Laplacian
+We first compute the $14$ persistent $1$-Laplacians: $\triangle_{1}^{L_1, L_2}$, $\triangle_{1}^{L_2, L_3}$, ..., $\triangle_{1}^{L_{13}, L_{14}}$,
+from which we compute the smallest $3$ eigenvalues, for each persistent $1$-Laplacian,
+as a result we produce a $14\times 3$ tensor from each image, 
+that is what the file "pneum_Lap.ipynb" is doing.
+
+
 
 
 
