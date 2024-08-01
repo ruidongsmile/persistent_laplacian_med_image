@@ -65,10 +65,10 @@ $$C_1^{K} = \\{(12), (23), (41), (63), (45), (56), (74), (85), (96), (78), (89)\
 
 There is a linear map (always referred to as a boundary map) 
 $\partial_2^{K, L}: C_2^L \to C_1^{K}$,
-and a boundary map $\partial_1^K C_1^K\to C_0^K$.
+and a boundary map $\partial_1^K: C_1^K\to C_0^K$.
 
 The persistent $1$-Laplacian $\triangle_1^{K, L}: C_1^K\to C_1^K$ is defined as 
-$$\triangle_1^{K, L}$$
+$$\triangle_1^{K, L}:=\partial_{1}^{K, L}\cir \left(\partial_{1}^{K, L}\right)^*$$
 
 
 
