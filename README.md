@@ -104,12 +104,13 @@ as a result we come up with a $14\times 1$ tensor for each image,
 that is what the file "pneum_up_Lap.ipynb" is doing.
 
 # Remark
-This project is mainly an experiment to show that the technique of persistent Laplacian can be applicable in medical imaging.
+1. This project is mainly an experiment to show that the technique of persistent Laplacian can be applicable in medical imaging.
 The algorithm is cited from [M*é*moli et al.](https://epubs.siam.org/doi/10.1137/21M1435471) for the general case of simplical complex via computing the Moore-Penrose inverse,
 however,
 in the case of cubical complex,
 there is a more efficient algorithm,
-which will come in the near future.
+which will be developed in the coming near future.
+2. The algorithm is differentiable, it is able to construct a block to compute the persisent eigenvalues and combine it with other blocks like convolution.
 
 
 
