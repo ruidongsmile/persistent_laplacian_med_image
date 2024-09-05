@@ -5,7 +5,7 @@ import torch
 class ColumnRearrangeRegular:
     def __init__(self, D):
         self.edges = None
-        self.vertices = dict()
+        self.vertices = None
         self.D = D
         self.D_nonzero = D.nonzero()
         self.visited = None
@@ -21,7 +21,8 @@ class ColumnRearrangeRegular:
         self.visited = {i: False for i in self.vertices}
 
     def find_edges(self):
-        self.edges = {i.item(): (self.D_nonzero[self.D_nonzero[:, 0] == i][:, 1]).tolist() for i in self.D_nonzero[:, 0].unique()}
+        self.edges = {i.item(): (self.D_nonzero[self.D_nonzero[:, 0] == i][:, 1]).tolist()
+                      for i in self.D_nonzero[:, 0].unique()}
 
     def dfs(self, u, temp):
         self.visited[u] = True
