@@ -54,6 +54,7 @@ class ColumnRearrangeGeneral:
         self.D_nonzero = D.nonzero()
         self.visited = None
         self.CC = []
+        self.CC_reg = []
         self.D_reg = None
         self.edge_idx = None
         self.hyperedge_idx = None
@@ -327,9 +328,9 @@ class UPPERSLAP:
 
         if len(bdry_coords) != 0:
             num_cells, bdry_cells = bdry_coords.shape
-            which_column = torch.tensordot(torch.arange(num_cells), torch.ones(bdry_cells).to(torch.int32), dims=0).to(
+            which_column = torch.tensordot(torch.arange(num_cells), torch.ones(bdry_cells).to(int), dims=0).to(
                 self.device)
-            bdry_indices = torch.transpose(torch.stack([bdry_coords.flatten(), which_column.flatten()]), 0, 1).to(torch.int32)
+            bdry_indices = torch.transpose(torch.stack([bdry_coords.flatten(), which_column.flatten()]), 0, 1).to(int)
             bdry_opr = torch.zeros([chain_space_dim, num_cells]).to(dtype=torch.float32, device=self.device)
 
             bdry_opr[bdry_indices[:, 0], bdry_indices[:, 1]] = torch.tensor([-1., 1., -1., 1.]).repeat(num_cells).to(
@@ -346,8 +347,14 @@ class UPPERSLAP:
         cell_filt_2 = self.torch_cell_filt(filt=self.filt_2, cell_dim=1)
         cell_filt_1 = self.torch_cell_filt(filt=self.filt_1, cell_dim=1)
 
-        all_indices = cell_filt_1.unsqueeze(0) == cell_filt_2.unsqueeze(1)
-        filt_idx = all_indices[:, :, :].all(dim=2).any(dim=1)
+        try:
+            all_indices = cell_filt_1.unsqueeze(0) == cell_filt_2.unsqueeze(1)
+            filt_idx = all_indices[:, :, :].all(dim=2).any(dim=1)
+        except (RuntimeError, IndexError):
+            filt_idx = torch.zeros(cell_filt_2.shape[0], dtype=torch.bool)
+
+        # all_indices = cell_filt_1.unsqueeze(0) == cell_filt_2.unsqueeze(1)
+        # filt_idx = all_indices[:, :, :].all(dim=2).any(dim=1)
         self.filt_idx = filt_idx
 
     def find_D(self):
@@ -355,7 +362,10 @@ class UPPERSLAP:
 
         # filt_idx = self.cell_idx_check()
 
-        D_mtx = self.bdry_opr[~self.filt_idx, :]
+        if self.filt_idx.numel() != 0:
+            D_mtx = self.bdry_opr[~self.filt_idx, :]
+        else:
+            D_mtx = self.bdry_opr
 
         self.D_mtx = D_mtx
 
@@ -370,7 +380,10 @@ class UPPERSLAP:
         self.graph_D = graph_D
 
     def find_rel_bdry_opr(self):
-        rel_bdry_opr = self.bdry_opr[self.filt_idx, :][:, self.graph_D.zero_column]
+        if self.filt_idx.numel() != 0 and self.filt_idx.nonzero().numel() != 0:
+            rel_bdry_opr = self.bdry_opr[self.filt_idx, :][:, self.graph_D.zero_column]
+        else:
+            rel_bdry_opr = torch.tensor([[0.]])
 
         for i in range(len(self.graph_D.CC_reg) - 1, -1, -1):
             cc = self.bdry_opr[self.filt_idx, :][:, self.graph_D.CC_reg[i]].sum(dim=1).unsqueeze(1)
@@ -380,7 +393,10 @@ class UPPERSLAP:
 
     def find_diag(self):
         _, cc_count = self.rel_bdry_opr.shape
-        diag = torch.eye(cc_count)
+        if cc_count != 0:
+            diag = torch.eye(cc_count)
+        else:
+            diag = torch.eye(1)
 
         for i in range(len(self.graph_D.CC_reg)):
             diag[i, i] = 1 / len(self.graph_D.CC_reg[i])
@@ -388,7 +404,10 @@ class UPPERSLAP:
 
     def find_diag_sqrt(self):
         _, cc_count = self.rel_bdry_opr.shape
-        diag_sqrt = torch.eye(cc_count)
+        if cc_count != 0:
+            diag_sqrt = torch.eye(cc_count)
+        else:
+            diag_sqrt = torch.eye(1)
 
         for i in range(len(self.graph_D.CC_reg)):
             diag_sqrt[i, i] = 1 / torch.sqrt(torch.tensor(len(self.graph_D.CC_reg[i])))
