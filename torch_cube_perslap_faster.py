@@ -129,6 +129,8 @@ class ColumnRearrangeGeneral:
                 if len(hyper_v & set(self.CC[i])) == 0:
                     cmpt_reg_idx.append(i)
             self.CC_reg = [self.CC[i] for i in cmpt_reg_idx]
+        else:
+            self.CC_reg = self.CC
                     
 
         # if len(self.hyperedges) != 0:
