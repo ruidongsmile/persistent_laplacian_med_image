@@ -64,6 +64,8 @@ class ColumnRearrangeGeneral:
 
     def find_vertices(self):
         self.vertices = (torch.nonzero(self.D.abs().sum(axis=0))).squeeze().tolist()
+        if isinstance(self.vertices, int):
+            self.vertices = [self.vertices]
 
     def vertices_visited(self):
         # self.visited = torch.zeros(len(self.vertices), dtype=torch.bool)
